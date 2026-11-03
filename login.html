@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | EduManage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-100 flex items-center justify-center p-4">
+
+    <div class="w-full max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2">
+
+        <!-- LEFT SIDE -->
+        <div class="hidden md:flex flex-col justify-between bg-gradient-to-br from-blue-700 to-indigo-950 p-12 text-white">
+
+            <div>
+                <div class="flex items-center gap-3">
+                    <div class="bg-white/20 p-3 rounded-xl text-2xl">🎓</div>
+                    <h1 class="text-2xl font-extrabold">EduManage</h1>
+                </div>
+
+                <div class="mt-24">
+                    <h2 class="text-4xl font-extrabold leading-tight">
+                        Manage Your Academic Journey.
+                    </h2>
+                    <p class="text-blue-100 mt-5 leading-7">
+                        Access your student management portal to manage
+                        academic information, courses and student records.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white/10 border border-white/20 rounded-2xl p-5">
+                <p class="text-blue-100 text-sm">
+                    "Education is the foundation of a successful future."
+                </p>
+                <p class="font-semibold mt-3">EduManage Portal</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="p-7 sm:p-12 flex flex-col justify-center">
+
+            <div class="mb-9">
+                <div class="md:hidden flex items-center gap-2 mb-8">
+                    <span class="text-3xl">🎓</span>
+                    <span class="font-extrabold text-xl">EduManage</span>
+                </div>
+
+                <span class="text-blue-600 text-sm font-bold uppercase tracking-wider">
+                    Welcome Back
+                </span>
+
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-3">
+                    Sign in to your account
+                </h2>
+
+                <p class="text-slate-500 mt-2 text-sm">
+                    Enter your credentials to access your dashboard.
+                </p>
+            </div>
+
+            <form id="loginForm" class="space-y-5">
+
+                <div>
+                    <label class="block text-sm font-semibold mb-2">
+                        Email Address
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                        placeholder="admin@example.com"
+                        class="w-full px-4 py-3.5 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                </div>
+
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="text-sm font-semibold">Password</label>
+                        <a href="#" class="text-xs text-blue-600 font-semibold">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <input
+                        type="password"
+                        id="password"
+                        required
+                        placeholder="Enter your password"
+                        class="w-full px-4 py-3.5 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-500 transition">
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="remember" class="accent-blue-600">
+                    <label for="remember" class="text-sm text-slate-600">
+                        Remember me
+                    </label>
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-xl font-bold shadow-lg shadow-blue-200 transition">
+                    Sign In →
+                </button>
+
+                <p id="message" class="text-sm text-center text-red-600"></p>
+
+            </form>
+
+            <div class="text-center mt-8 text-sm text-slate-500">
+                Don't have an account?
+                <a href="registration.html"
+                   class="text-blue-600 font-bold hover:underline">
+                    Create Account
+                </a>
+            </div>
+
+            <p class="text-center text-xs text-slate-400 mt-10">
+                © 2026 EduManage. All rights reserved.
+            </p>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('message').textContent =
+                'Login interface ready. Connect PHP authentication to sign in.';
+        });
+    </script>
+
+</body>
+</html>
